@@ -18,12 +18,14 @@ jobs:
       - image: amazon/aws-cli
     steps:
       - checkout
+      - run:
+          command: head ../template.yml
       - run: 
           name: create stack
           command: |
             aws cloudformation create-stack \
               --stack-name ${AWS_STACK_NAME} \
-              --template-body ../template.yml \
+              --template-body file://../template.yml \
               # --parameters file://$3 \
               --capabilities "CAPABILITY_IAM" "CAPABILITY_NAMED_IAM" \
               --region=${AWS_DEFAULT_REGION} 
