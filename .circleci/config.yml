@@ -39,6 +39,5 @@ jobs:
 workflows:
   creation: 
     jobs:
-      #- config_aws
-      - create_infra
+      - create_infra:
           context: AWS_Victor
