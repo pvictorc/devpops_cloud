@@ -26,7 +26,6 @@ jobs:
             aws cloudformation create-stack \
               --stack-name ${AWS_STACK_NAME} \
               --template-body file://template.yml \
-              # --parameters file://$3 \
               --capabilities "CAPABILITY_IAM" "CAPABILITY_NAMED_IAM" \
               --region=${AWS_DEFAULT_REGION} 
   destroy_infra:
