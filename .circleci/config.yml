@@ -30,7 +30,7 @@ jobs:
               --region=${AWS_DEFAULT_REGION} 
   configure_infra:
     docker:
-      - image: python3:3.7-alpine3.11
+      - image: python:3.7-alpine3.11
         auth:
           username: $DOCKERHUB_USER  
           password: $DOCKERHUB_PASSWORD
@@ -51,12 +51,12 @@ jobs:
 workflows:
   creation: 
     jobs:
-      - create_infra:
-          context: AWS_Victor
+      # - create_infra:
+      #     context: AWS_Victor
       - configure_infra:
           context: AWS_Victor
-          requires: 
-            - create_infra
+          # requires: 
+          #   - create_infra
           filters:
             branches:
               only:
