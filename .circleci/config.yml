@@ -3,7 +3,17 @@ version: 2.1
 
 orbs:
   aws-cli: circleci/aws-cli@2.0.3
-        
+
+commands:
+  destroy_infrastructure:
+    steps:
+      - run:
+          name: Destroy environment - run on fail
+          when: on_fail
+          command: |
+            aws cloudformation delete-stack \
+              --stack-name ${AWS_STACK_NAME}-${CIRCLE_WORKFLOW_ID:0:5}
+
 jobs:
   create_infra:
     docker: 
@@ -56,16 +66,7 @@ jobs:
               echo "It failed" 
               return 1
             fi
-  destroy_infrastructure:
-    docker: 
-      - image: amazon/aws-cli
-    steps:
-      - run:
-          name: run on fail
-          when: on_fail
-          command: |
-            aws cloudformation delete-stack \
-              --stack-name ${AWS_STACK_NAME}-${CIRCLE_WORKFLOW_ID:0:5}
+      - destroy_infrastructure
 
 workflows:
   deploy: 
@@ -83,7 +84,4 @@ workflows:
       - smoke_test:
           requires:
             - configure_infra
-      - destroy_infrastructure:
-          context: AWS_Victor
-          requires:
-            - smoke_test
+
