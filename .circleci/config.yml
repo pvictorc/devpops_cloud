@@ -48,6 +48,19 @@ jobs:
           name: Run Ansible Playbook
           command: |
             ansible-playbook -i inventory main-remote.yml
+  smoke_test:
+    docker: 
+      - image: alpine:latest
+    steps:
+      - run: 
+          name: Smoke test example
+          command: |
+            if curl -s --head "https://google.com" \
+              then \
+                echo "It worked!" \
+              else \
+                echo "It failed" \
+            fi
 
 workflows:
   creation: 
@@ -62,3 +75,6 @@ workflows:
             branches:
               only:
                 - main
+      - smoke_test:
+          requires:
+            - configure_infra
