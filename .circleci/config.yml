@@ -55,7 +55,7 @@ jobs:
       - run: 
           name: Smoke test example
           command: |
-            $URL="https://google.com.error"
+            URL="https://google.com.error"
             if curl -s --head ${URL} 
             then 
               echo "It worked!" 
