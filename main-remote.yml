@@ -10,9 +10,7 @@
   #   wait_for_connection:
 
   roles:
-  - setup
-  - deploy:
-      requires: 
-        - setup
-        - deploy
+   - setup
+   - deploy
+
 
