@@ -36,6 +36,7 @@ jobs:
           password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
+      - run: echo ${KEY_FINGERPRINT:0:5}
       - add_ssh_keys:
           fingerprints: ["${KEY_FINGERPRINT}"]
       - run: 
