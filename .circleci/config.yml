@@ -42,7 +42,7 @@ jobs:
           name: Install Ansible
           become: true
           command: |
-            apt install ansible -y
+            apk add --update ansible
       - run:
           name: Run Ansible Playbook
           command: |
