@@ -55,12 +55,13 @@ jobs:
       - run: 
           name: Smoke test example
           command: |
-            if curl -s --head "https://google.com.error" \
-            then \
-              echo "It worked!" \
+            $URL="https://google.com.error"
+            if curl -s --head ${URL} 
+            then 
+              echo "It worked!" 
               return 0
             else \
-              echo "It failed" \
+              echo "It failed" 
               return 1
             fi
 
