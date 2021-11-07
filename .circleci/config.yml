@@ -52,6 +52,8 @@ jobs:
     docker: 
       - image: alpine:latest
     steps:
+      - run:
+          command: apk add curl
       - run: 
           name: Smoke test example
           command: |
