@@ -82,6 +82,7 @@ workflows:
               only:
                 - main
       - smoke_test:
+          context: AWS_Victor
           requires:
             - configure_infra
 
