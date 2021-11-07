@@ -31,6 +31,9 @@ jobs:
   configure_infra:
     docker:
       - image: python3:3.7-alpine3.11
+        auth:
+          username: $DOCKERHUB_USER  
+          password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
       - add_ssh_keys:
