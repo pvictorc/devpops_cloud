@@ -1,0 +1,14 @@
+---
+- name: Creates directory
+  file:
+    path: ~/web
+    state: directory
+
+- name: Copy index test page
+  template:
+    src: "files/index.js"
+    dest: "~/web/index.js"
+
+- name: Executing node
+  shell: |
+    pm2 start ~/web/index.js -f --watch
