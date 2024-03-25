@@ -1,5 +1,5 @@
 
-# Kubernetes Exercícios 
+# Kubernetes exercises 
 
 ## Pods
 
