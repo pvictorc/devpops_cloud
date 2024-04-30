@@ -2,15 +2,15 @@
 
 # Kustomize simple example
 
-.
-├── base
-│   ├── kustomization.yaml
-│   └── pod-1.yaml
-├── overlays
-│   └── dev
-│       ├── kustomization.yaml
-│       └── pod-1-dev.yaml
-└── README.md
+    .
+    ├── base  
+    │   ├── kustomization.yaml  
+    │   └── pod-1.yaml  
+    ├── overlays  
+    │   └── dev  
+    │       ├── kustomization.yaml  
+    │       └── pod-1-dev.yaml  
+    └── README.md  
 
 
 Original pod-1-dev.yml file
