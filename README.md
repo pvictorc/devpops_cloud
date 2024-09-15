@@ -1,29 +1,64 @@
-# DevOps and Cloud Tools and Tips
-My favorite or recommended tools. 
+-   [DevOps and Cloud Tools and Tips](#devops-and-cloud-tools-and-tips)
+-   [CI/CD](#cicd)
+-   [AWS](#aws)
+    -   [AWS Reference Architecture](#aws-reference-architecture)
+    -   [CloudFormation - Visual Studio CloudFormation
+        Extensions](#cloudformation---visual-studio-cloudformation-extensions)
+-   [Monitoring](#monitoring)
+    -   [Server / Metrics exporter](#server-metrics-exporter)
+    -   [URL Monitoring](#url-monitoring)
+    -   [Networking monitoring](#networking-monitoring)
+    -   [SaaS](#saas)
 
-# CI/CD 
-* Gitlab CI
-* CircleCI
+DevOps and Cloud Tools and Tips
+===============================
 
-# AWS 
+My favorite or recommended tools.
 
-## CFN linter
-* Lint for CloudFormation: cfn-lint
+CI/CD
+=====
 
-## Best Visual Studio CloudFormation Extensions
-* VSCode CFN-linter: kddejong.vscode-cfn-lint
-* CloudFormation Snippets: dsteenman.cloudformation-yaml-snippets
+-   Gitlab CI
+-   Github Actions
+-   CircleCI
 
-# Monitoring 
+AWS
+===
 
-## SaaS
-* [Server Density](https://www.serverdensity.com/)
+AWS Reference Architecture
+---------------------
 
-## Networking monitoring
-* [Zabbix](https://www.zabbix.com/)
+-   [AWS Architecture Page](https://aws.amazon.com/pt/architecture/?cards-all.sort-by=item.additionalFields.sortDate&cards-all.sort-order=desc&awsf.content-type=*all&awsf.methodology=*all&awsf.tech-category=*all&awsf.industries=*all&awsf.business-category=*all)
 
-## URL Monitoring
-* [CheckMK](https://checkmk.com/)
-Full feature URL monitoring
-* [Uptime Kuma](https://github.com/louislam/uptime-kuma)
-Create lightweight and simple monitoring
+CloudFormation - Visual Studio CloudFormation Extensions
+--------------------------------------------------------
+
+-   Linter for CloudFormation: cfn-lint
+-   VSCode CFN-linter: kddejong.vscode-cfn-lint
+-   CloudFormation Snippets: dsteenman.cloudformation-yaml-snippets
+
+Monitoring
+==========
+
+Server / Metrics exporter
+-------------------------
+
+-   [Prometheus](https://prometheus.io/) Most used open source metrics
+    exporter
+
+URL Monitoring
+--------------
+
+-   [CheckMK](https://checkmk.com/) Full feature URL monitoring
+-   [Uptime Kuma](https://github.com/louislam/uptime-kuma) Create
+    lightweight and simple monitoring
+
+Networking monitoring
+---------------------
+
+-   [Zabbix](https://www.zabbix.com/)
+
+SaaS
+----
+
+-   [Server Density](https://www.serverdensity.com/)
