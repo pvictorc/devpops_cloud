@@ -1,0 +1,39 @@
+# DevOps and Cloud Tools and Tips
+My favorite or recommended tools. 
+
+# Table of Contents
+
+
+# CI/CD 
+* Gitlab CI
+* Github Actions
+* CircleCI
+
+# AWS 
+
+## AWS Architecture Page
+* [](https://aws.amazon.com/pt/architecture/?cards-all.sort-by=item.additionalFields.sortDate&cards-all.sort-order=desc&awsf.content-type=*all&awsf.methodology=*all&awsf.tech-category=*all&awsf.industries=*all&awsf.business-category=*all)
+
+## CFN linter
+* Lint for CloudFormation: cfn-lint
+
+## Best Visual Studio CloudFormation Extensions
+* VSCode CFN-linter: kddejong.vscode-cfn-lint
+* CloudFormation Snippets: dsteenman.cloudformation-yaml-snippets
+
+# Monitoring 
+
+## Server / Metrics exporter
+* [Prometheus](https://prometheus.io/) Most used open source metrics exporter  
+
+## URL Monitoring
+* [CheckMK](https://checkmk.com/)
+Full feature URL monitoring
+* [Uptime Kuma](https://github.com/louislam/uptime-kuma)
+Create lightweight and simple monitoring
+
+## Networking monitoring
+* [Zabbix](https://www.zabbix.com/)
+
+## SaaS
+* [Server Density](https://www.serverdensity.com/)
