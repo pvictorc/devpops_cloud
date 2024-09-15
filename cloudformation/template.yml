@@ -5,11 +5,11 @@ Resources:
   EC2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
+      # KeyName: udacity
+      InstanceType: t2.micro
+      ImageId: 'ami-0182f373e66f89c85' # you may need to find out what instance types are available in your region - use https://cloud-images.ubuntu.com/locator/ec2/
       SecurityGroups:
         - !Ref InstanceSecurityGroup
-      KeyName: udacity
-      ImageId: 'ami-0629230e074c580f2' # you may need to find out what instance types are available in your region - use https://cloud-images.ubuntu.com/locator/ec2/
-      InstanceType: t2.micro
   InstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
